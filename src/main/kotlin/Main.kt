@@ -1,9 +1,19 @@
 import `class`.Computer
 import `class`.Human
+import exceptiontest.BadName
+import exceptiontest.testName
 
 fun main() {
     println("Hi! Welcome to the game! Please input your name:")
-    var nameInput = readLine() ?: ""
+    lateinit var nameInput: String
+    do {
+        try {
+            nameInput = readLine() ?: ""
+            testName(nameInput)
+        } catch (e: BadName) {
+            println("Invalid input or user name exist. Please try again!")
+        }
+    } while (nameInput == "")
 
     val player = Human(nameInput)
     val computer = Computer()
