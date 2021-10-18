@@ -55,7 +55,7 @@ fun main() {
 internal val choices: Map<String, String> = mapOf("1" to "Rock", "2" to "Paper", "3" to "Scissors")
 
 
-fun playGame(player: Human, computer: Computer) {
+private fun playGame(player: Human, computer: Computer) {
     val playerMove = player.action()
     val computerMove = computer.action()
 
