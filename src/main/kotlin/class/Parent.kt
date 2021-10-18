@@ -1,6 +1,6 @@
 package `class`
 
-abstract class General {
+abstract class Player {
     var wins: Int = 0
     var losses: Int = 0
     var ties: Int = 0

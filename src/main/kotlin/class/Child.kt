@@ -5,7 +5,7 @@ import exceptiontest.BadMove
 import exceptiontest.testMove
 import java.util.*
 
-class Human(name_param: String) : General() {
+class Human(name_param: String) : Player() {
     override val name: String = name_param
     override fun action(): String {
         println("Please select a number from: $choices")
@@ -23,7 +23,7 @@ class Human(name_param: String) : General() {
     }
 }
 
-class Computer : General() {
+class Computer : Player() {
     override val name: String = "Computer"
     override fun action(): String {
         return (1..choices.size).random().toString()
