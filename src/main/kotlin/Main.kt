@@ -7,11 +7,11 @@ import exceptiontest.testReply
 import java.util.*
 
 fun main() {
-//    get user name
+//    get username
     println("Hi! Welcome to the game! Please input your name:")
     lateinit var nameInput: String
 
-//    Loop to make sure that user input valid name. ie. no blank name
+//    Loop to make sure that user input valid name. i.e. no blank name
     do {
         try {
             nameInput = readLine() ?: ""
@@ -31,8 +31,8 @@ fun main() {
 //    Repetitive game
     do {
         playGame(player, computer)
-        println("continue? Y/N")
-//        Loop to make sure use input valid entry. ie. no blank input and input value must be found in choices(map) key.
+        println("Continue? Y/N")
+//        Loop to make sure use input valid entry. i.e. no blank input and input value must be found in choices(map) key.
         do {
             try {
                 val reply = readLine() ?: ""
@@ -52,7 +52,7 @@ fun main() {
 
 }
 
-val choices: Map<String, String> = mapOf("1" to "Rock", "2" to "Paper", "3" to "Scissors")
+internal val choices: Map<String, String> = mapOf("1" to "Rock", "2" to "Paper", "3" to "Scissors")
 
 
 fun playGame(player: Human, computer: Computer) {
