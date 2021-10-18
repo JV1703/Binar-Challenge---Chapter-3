@@ -56,7 +56,6 @@ val choices: Map<String, String> = mapOf("1" to "Rock", "2" to "Paper", "3" to "
 
 
 fun playGame(player: Human, computer: Computer) {
-    var output: String = ""
     val playerMove = player.action()
     val computerMove = computer.action()
 

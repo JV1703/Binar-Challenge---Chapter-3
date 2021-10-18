@@ -1,11 +1,10 @@
 package `class`
 
-abstract class Player {
-    var wins: Int = 0
-    var losses: Int = 0
-    var ties: Int = 0
-    val numMatch: Int
-    get() = wins + losses + ties
+abstract class Player : ScoreBoard {
+    override var wins = 0
+    override var losses = 0
+    override var ties = 0
+
     abstract val name: String
     abstract fun action(): String
 
