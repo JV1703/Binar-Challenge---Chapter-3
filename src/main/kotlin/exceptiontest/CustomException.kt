@@ -21,7 +21,7 @@ fun testMove(input: String) {
 
 class BadReply : IllegalArgumentException()
 fun testReply(reply: String) {
-    if (reply.isBlank() || reply != "y" && reply != "n") {
+    if (reply.isBlank() || !reply.equals("y",true) && !reply.equals("n",true)) {
         throw BadReply()
     }
 }
