@@ -4,7 +4,6 @@ import exceptiontest.BadName
 import exceptiontest.BadReply
 import exceptiontest.testName
 import exceptiontest.testReply
-import java.util.*
 
 fun main() {
 //    get username
@@ -37,7 +36,7 @@ fun main() {
             try {
                 val reply = readLine() ?: ""
                 testReply(reply)
-                if (reply.uppercase(Locale.getDefault()) == "N") status = false
+                if (reply.equals("n", true)) status = false
                 break
             } catch (e: BadReply) {
                 println("Invalid input.")

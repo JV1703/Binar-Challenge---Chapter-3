@@ -4,6 +4,7 @@ import choices
 
 
 class BadName : IllegalArgumentException()
+
 fun testName(input: String) {
     if (input.isBlank()) {
         throw BadName()
@@ -12,6 +13,7 @@ fun testName(input: String) {
 
 
 class BadMove : IllegalArgumentException()
+
 fun testMove(input: String) {
     if (input.isBlank() || !choices.containsKey(input)) {
         throw BadMove()
@@ -20,8 +22,9 @@ fun testMove(input: String) {
 
 
 class BadReply : IllegalArgumentException()
+
 fun testReply(reply: String) {
-    if (reply.isBlank() || !reply.equals("y",true) && !reply.equals("n",true)) {
+    if (reply.isBlank() || !reply.equals("y", true) && !reply.equals("n", true)) {
         throw BadReply()
     }
 }
