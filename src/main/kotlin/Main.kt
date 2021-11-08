@@ -1,5 +1,6 @@
 import `class`.Computer
 import `class`.Human
+import `class`.Player
 import exceptiontest.BadName
 import exceptiontest.BadReply
 import exceptiontest.testName
@@ -16,9 +17,9 @@ fun main() {
             nameInput = readLine() ?: ""
             testName(nameInput)
         } catch (e: BadName) {
-            println("Invalid input or user name exist. Please try again!")
+            println("Invalid input. Please try again!")
         }
-    } while (nameInput == "")
+    } while (nameInput.trim() == "")
 
 //    Instantiate Human class and Computer class
     val player = Human(nameInput)
